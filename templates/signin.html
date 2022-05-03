@@ -1,0 +1,29 @@
+{% from 'form_helper.html' import displayField %}
+
+{% extends "prelogin-layout.html" %}
+
+{% block title%}Registration {% endblock %}
+
+{% block content %}
+    <div class="form">
+        <h2 class="heading">Get Started</h2>
+
+        <form action="{{ url_for('signin') }}", method="POST">
+
+            {{ displayField(form.username, 'Username', autocomplete="off", autofocus=true) }}
+            {{ displayField(form.password, 'Password') }}
+            {{ displayField(form.confirm_pswd, 'Confirm password') }}
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-secondary">
+            </div>
+
+            {{ form.csrf_token }}
+        </form>
+
+        <hr>
+
+        <p class="bottom_msg">Already Registered? <a href={{url_for('login')}} class="link">Login here</a>.</p>
+    </div>
+
+{% endblock %}

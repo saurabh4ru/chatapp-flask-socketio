@@ -1,0 +1,421 @@
+.show-mobile{
+    display: none !important;
+}
+
+#hide{
+    display: none;
+}
+
+.transparent-bar{
+    display: none;
+}
+
+/* rooms name section */
+#sidebar{
+    position: absolute;
+    margin-left: 85%;
+    width: 15%;
+    height: 100%;
+    background-color: rgb(31, 30, 34);
+    color: white;
+}
+
+#sidebar_rooms{
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    margin-top: 2em;
+    height: 86%;
+    width: 100%;
+    color: white;
+    overflow-y: auto; /*Make  this section scrolable */
+}
+
+/* that small verticle line at side of rooms name section */
+.sidebar_with_tilte{
+    position: absolute;
+    background-color: rgb(131, 131, 131);
+    width: 0.05em;
+    height: 100%;
+    margin-left: 0%;
+}
+
+/* "ROOMS" text */
+.rooms_text{
+    color: white;
+    font-family: montserrat;
+    text-align: center;
+    padding-top :2rem;
+}
+
+/* each room name */
+.select-room{
+    font-size: medium;
+}
+
+/* each room text when hovered */
+.select-room:hover{
+    background-color: #3b3b3b7e;
+    text-align: center !important;
+    padding: 0.5em !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+}
+
+.selected_img{
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-family: montserrat;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    margin-left: 7%;
+    width: 70%;
+    bottom: 4rem;
+    min-height: 3em;
+    border-radius: 25px;
+}
+
+#img_output{
+    margin: 1em;
+    width: 500px;
+}
+
+.fa-times-circle{
+    position: absolute;
+    top: 0.5em;
+    right: 0.4em;
+}
+
+.fa-times-circle:hover{
+    cursor: pointer;
+}
+
+.fa-file-image{
+    position: absolute;
+    bottom: 1.25em;
+    color: rgb(0, 0, 0);
+    right: 24%;
+}
+
+.fa-file-image:hover{
+    cursor: pointer;
+    color: rgb(97, 58, 58);
+}
+
+/* rounded input box */
+.form-rounded {
+    position: absolute;
+    border-radius: 1rem !important;
+    width: 70% !important;
+    margin-left: 7%;
+    bottom: 1rem;
+    padding-right: 3em !important;
+}
+
+/* send button */
+.btn-circle {
+    background-color: rgb(6, 185, 176) !important;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50% !important;
+    bottom: 0.6rem;
+    right: 18%;
+  }
+
+/* send button icon */
+.fa-arrow-right{
+    color: white;
+}
+
+/* whole section-dont know if its important */
+#rightside-pannel {
+    overflow: hidden; /* Make this div take up the rest of the horizontal space, and no more */
+}
+
+/* whole back section */
+.main-chat-section{
+    background: rgb(53,53,53);
+    background: linear-gradient(114deg, rgba(53,53,53,1) 0%, rgba(11,11,11,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+/* the area where msg is displayed */
+#display-message-section {
+    padding-top: 2em;
+    min-height: 90%;
+    max-height: 90%;
+    overflow-y: auto; /*Make  this section scrolable */
+}
+
+.my-img{
+    margin-left: 55%;
+    max-width: 25em;
+    background-color: #383838;
+    color: white;
+    font-family: montserrat;
+    border-color: rgb(101, 102, 40);
+    border-width: 1px;
+    border-style: solid;
+    word-wrap: break-word;
+}
+
+.other-img{
+    margin-left: 8%;
+    max-width: 25em;
+    background-color: #383838;
+    color: white;
+    font-family: montserrat;
+    border-color: rgb(52, 89, 114);
+    border-width: 1px;
+    border-style: solid;
+    word-wrap: break-word;
+}
+
+.chat-img{
+    width: 24.9em;
+}
+
+.enlarged-img{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.795);
+    z-index: 2;
+}
+
+.open_img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.fa-arrow-left{
+    position: absolute;
+    color: white;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.fa-cloud-download-alt{
+    position: absolute;
+    color: white;
+    right: 1em;
+    bottom: 1em;
+}
+
+.fa-arrow-left:hover{
+    cursor: pointer;
+}
+
+.fa-cloud-download-alt{
+    cursor: pointer;
+}
+
+.others-msg {
+    margin-left: 8%;
+    max-width: 25em;
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 0px 15px 15px 15px;
+    background-color: #242323;
+    color: white;
+    font-family: montserrat;
+    border-color: rgb(52, 89, 114);
+    border-width: 0.5px;
+    border-style: solid;
+    word-wrap: break-word;
+    padding-right: 1em;
+}
+
+.my-msg {
+    margin-left: 55%;
+    max-width: 25em;
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 15px 15px 0px 15px;
+    background-color: #383838;
+    color: white;
+    font-family: montserrat;
+    border-color: rgb(101, 102, 40);
+    border-width: 0.5px;
+    border-style: solid;
+    word-wrap: break-word;
+    padding-right: 1em;
+}
+
+.system-msg {
+    color: black;
+    font-size:0.9em;
+    text-align: center;
+    margin-left: 32%;
+    max-width: 30%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.timestamp {
+    color: #898d92;
+    font-size:0.7em;
+}
+
+.other-username {
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: montserrat;
+    color: #00b7ff;
+}
+
+.my-username {
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: montserrat;
+    color: #ffc400;
+}
+
+/*custom scrollbar*/
+#sidebar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#sidebar::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#sidebar::-webkit-scrollbar-thumb
+{
+	background-color: rgb(2, 96, 204);	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+/* hiding scrollbar in chrome */
+#display-message-section::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+#display-message-section {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+@media only screen and (max-width: 875px){
+    .show-mobile{
+        display: block !important;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+
+    .transparent-bar{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        right: 0;
+        width: 40%;
+        height: 100%;
+    }
+
+    #display-message-section {
+        padding-top: 4em;
+    }
+
+    #sidebar{
+        position: absolute !important;
+        margin-left: 13%;
+        width: 50%;
+        z-index: 2;
+    }
+
+    .my-img{
+        right: 0;
+        margin-right: 5%;
+        max-width: 30em;
+        margin-left: 15%;
+    }
+
+    .other-img{
+        right: 0;
+        margin-left: 5%;
+        max-width: 30em;
+        margin-right: 15%;
+    }
+
+    .my-msg{
+        right: 0;
+        margin-right: 5%;
+        max-width: 30em;
+        margin-left: 15%;
+    }
+
+    .chat-img{
+        max-width:100%;
+        height:auto;
+    }
+
+    .others-msg{
+        margin-left: 5%;
+        max-width: 30em;
+        margin-right: 15%;
+    }
+
+    .system-msg{
+        margin-left: 20%;
+        max-width: 60%;
+    }
+
+    .selected_img{
+        margin-left: 4%;
+        width: 75%;
+        bottom: 4em;
+    }
+
+    #img_output{
+        width: 200px;
+    }
+
+    .form-rounded{
+        margin-left: 4%!important;
+        width: 75% !important;
+        bottom: 1em;
+    }
+
+    .fa-file-image{
+        position: absolute;
+        bottom: 1.25em;
+        right: 24%;
+    }
+
+    .btn-circle{
+        right: 4%;
+    }
+}

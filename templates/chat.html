@@ -1,0 +1,62 @@
+{% extends 'header.html' %}
+
+{% block title%}Chat{% endblock %}
+
+{% block content %}
+
+    <div id="enlarged-img" class="enlarged-img">
+        <i id="close-enlarged-img" class="fas fa-arrow-left fa-lg"></i>
+        <img id="open_img" class="open_img">
+        <i id="download-enlarged-image" class="fas fa-cloud-download-alt fa-lg"></i>
+    </div>
+    <p class="chat-img" id="hide"></p>
+    <div id="main-section">
+        <!--room selection-->
+        <div class="transparent-bar mobile-hide"></div>
+        <div id="sidebar" class="mobile-hide">
+            <div class="sidebar_with_tilte"></div>
+            <h4 class="rooms_text">Rooms</h4>
+                <nav id="sidebar_rooms">
+                    {% for i in user_rooms_list %}
+                        <h5 class="select-room" id="{{i}}">{{ i }}</h5>
+                        <hr color="white">
+                    {% endfor %}
+                </nav>
+        </div>
+
+        <!--message are-->
+        <div id="rightside-panel">
+            <div class="main-chat-section">
+            
+                <!--Display message start-->
+                <div id="display-message-section">
+
+                </div>
+                <!--Display message ends-->
+
+                <!--input message-->
+                <div>
+                    <div class="selected_img" id="selected_img">
+                        <p id="image_preview"><img id="img_output"><i id = "cancel-img" class="far fa-times-circle fa-lg"></i></p>
+                    </div>
+                    <input type="text" id="user_message" placeholder="Type here.." autocomplete="off" class="form-control form-rounded" maxlength="150">
+                    <label for="img_upload" class="custom-img-upload">
+                        <i class="fas fa-lg fa-file-image" id="send_image"></i>
+                    </label>
+                    <input id="img_upload" type="file" accept="image/*"/>
+                    <button class="btn btn-circle" type="button" id="send_message"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- get username ans room_name-->
+    <script type="text/javascript">
+        const username = `{{ username }}`;
+        const room_name = `{{ room_name }}`;
+        const user_rooms_list = `{{ user_rooms_list }}`
+    </script>
+
+        
+{% endblock %}

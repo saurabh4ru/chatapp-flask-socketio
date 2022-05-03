@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <!--title image-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./static/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./static/images/favicon-16x16.png">
+        <link rel="manifest" href="./static/images/site.webmanifest">
+
+
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale-1, shrink-to-fit=no">
+        <title>{% block title%}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="static\styles\header.css">
+        <link rel="stylesheet" type="text/css" href="static\styles\create_room.css">
+        <link rel="stylesheet" type="text/css" href="static\styles\chat.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/53136ede93.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!--custom js-->
+        <script src="{{ url_for('static', filename='scripts/chat_page.js') }}"></script>        
+
+        <!-- SocketIO JS -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+
+        <!-- Custom SocketIO JS -->
+        <script src="{{ url_for('static', filename='scripts/socketio.js') }}"></script>
+
+    </head>
+    <body>
+        <div class="background">
+            <i class="fas fa-bars fa-lg show-mobile" id="ham"></i>
+            <div class="top_bar show-mobile"></div>
+            <nav class="navbar_left mobile-hide">
+                <i class="fas fa-bars fa-lg show-mobile" id="ham_exit"></i>
+                <img src="static\images\person.svg" class="user mobile-hide">
+                <p class="user_name mobile-hide" >{{ username }}</p>
+                <a id="create_room" href={{url_for('create_room')}} class="join_room_button mobile-hide"><img class="join_room_icon mobile-hide" src="static\images\person-plus-fill.svg" alt="Join Room"></a>
+                <a class="logout mobile-hide" id="logout_button" href={{url_for("logout")}}><img class="logout_icon" src="static\images\box-arrow-right.svg"></a>
+            </nav>
+            <div>
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

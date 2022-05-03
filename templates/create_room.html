@@ -1,0 +1,38 @@
+{% extends 'header.html' %}
+
+{% block title%}Create_room{% endblock %}
+
+{% block content %}
+   <div class="background_create_room">
+       <!--Flash message-->
+       {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="alert alert-warning" role="alert">
+               {{ messages[0][1] }}
+           </div>
+            {% endif %}
+        {% endwith %}
+      <div class="center_block">
+         <div class="create_room">
+            <form action = "{{ url_for('create_room') }}" method = "POST">
+               <p class="text create_text">Create Your Own Room:</p>
+               <div class="input-group input-group-sm mb-3">
+                  <input type = "text" name = "Room_name" placeholder="Enter a name" autocomplete="off" required="required" class="form-control create_input">
+               </div>
+               <p><input type = "submit" value="Create" class="btn btn-outline-light create_button"></p>
+            </form>
+         </div>
+
+     
+         <div class="join_room">
+            <p class="text join_text">Join a room:</p>
+            <form action = "{{ url_for('create_room') }}" method = "POST">
+               <div class="input-group input-group-sm mb-3">
+                  <input type = "text" name = "join_room_name" placeholder="Enter the room name" required="required" class="form-control join_input">
+               </div>
+               <p><input type = "submit" value = "Join" class="btn btn-outline-light join_button"></p>
+            </form>
+         </div>
+      </div>
+   </div>
+{% endblock %}
